@@ -77,10 +77,22 @@ TODO: Record what is specified and what is not specified.
 >
 > **Prompt:** What business rules and calculations must the solution represent before it can produce the result? Describe the rules in words without writing the final branch condition or completed pseudocode.
 
-1. TODO: Describe the regular-pay rule.
-2. TODO: Describe the overtime-pay rule.
-3. TODO: Describe why the solution needs a decision.
-4. TODO: Describe what the solution ultimately calculates.
+1. START
+
+    INPUT hoursWorked
+
+    IF hoursWorked <= 40 THEN
+        LET paycheck = hoursWorked * 20
+    ELSE
+        LET regularPay = 40 * 20
+        LET overtimeHours = hoursWorked - 40
+        LET overtimePay = overtimeHours * 30
+        LET paycheck = regularPay + overtimePay
+    END IF
+
+    OUTPUT paycheck
+
+END
 
 ### 3.3 IPO: Output
 
@@ -104,7 +116,7 @@ TODO: Record the output-format requirement or write Not specified.
 >
 > **Prompt:** What does the regular-pay requirement mean in your own words?
 
-TODO: Replace with your explanation.
+The phrase "above 40 hours" means that overtime only applies to hours worked after the first 40 hours. The first 40 hours are paid at the regular rate of $20 per hour. Any hours beyond 40 are paid at the overtime rate of $30 per hour.
 
 ### 4.2 FR-3 — Overtime Pay
 
@@ -112,7 +124,7 @@ TODO: Replace with your explanation.
 >
 > **Prompt:** What does the phrase **above 40 hours** mean for the overtime rule?
 
-TODO: Replace with your explanation.
+The phrase "above 40 hours" means that overtime only applies to hours worked after the first 40 hours. The first 40 hours are paid at the regular rate of $20 per hour. Any hours beyond 40 are paid at the overtime rate of $30 per hour.
 
 ### 4.3 FR-4 — Select the Applicable Calculation
 
